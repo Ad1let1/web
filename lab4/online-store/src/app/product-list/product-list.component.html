@@ -1,0 +1,25 @@
+<h2>Товары Kaspi</h2>
+
+<div class="product-container">
+  <div *ngFor="let product of products" class="product-card">
+    
+    <div class="image-container">
+        <img [src]="product.image" [alt]="product.name" class="product-image">
+    </div>
+
+    <div class="product-info">
+        <h3>
+            <a [href]="product.link" target="_blank">{{ product.name }}</a>
+        </h3>
+        
+        <div class="rating">
+            ⭐ {{ product.rating }}
+        </div>
+
+        <button (click)="share(product.link)" class="share-btn">
+           Поделиться
+        </button>
+    </div>
+
+  </div>
+</div>
