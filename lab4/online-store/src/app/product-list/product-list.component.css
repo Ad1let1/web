@@ -1,96 +1,129 @@
 .product-container {
-  display: grid; /* Включаем сетку */
-  grid-template-columns: repeat(4, 1fr); /* Ровно 4 колонки одинаковой ширины */
-  gap: 20px; /* Расстояние между карточками */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   padding: 20px;
 }
 
 .product-card {
   background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 15px;
+  border: 1px solid #e0e0e0; /* Светлая рамка */
+  border-radius: 8px;
+  padding: 12px;
   display: flex;
-  flex-direction: column; /* Элементы друг под другом */
-  align-items: center; /* Центрируем всё по горизонтали */
-  text-align: center; /* Текст тоже по центру */
-  transition: transform 0.2s, box-shadow 0.2s;
-  height: 100%; /* Чтобы все карточки были одной высоты */
+  flex-direction: column;
+  align-items: flex-start; /* В Kaspi всё выровнено по левому краю, а не по центру */
+  text-align: left; 
+  transition: box-shadow 0.2s;
+  height: 100%;
+  font-family: 'Roboto', sans-serif; /* Похожий шрифт */
 }
 
-/* Эффект при наведении (для красоты) */
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .image-container {
   width: 100%;
-  height: 200px; /* Фиксированная высота для картинки, чтобы карточки были ровными */
-  margin-bottom: 10px;
+  height: 180px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .product-image {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Картинка не обрежется, а впишется */
+  object-fit: contain;
 }
 
-h3 {
-  font-size: 16px;
-  margin: 10px 0;
-  min-height: 40px; /* Чтобы названия в 2 строки не ломали сетку */
+/* Название товара */
+.product-title {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  height: 40px; /* Ограничим высоту заголовка */
+  overflow: hidden;
 }
 
-h3 a {
-  color: #333;
+.product-title a {
+  color: #0089d0; /* Синий цвет ссылок Kaspi */
   text-decoration: none;
 }
 
-h3 a:hover {
-  color: #0089d0;
+.product-title a:hover {
+  color: #f14635; /* При наведении краснеет */
 }
 
-.rating {
-  color: #f1c40f; /* Золотой цвет звезд */
+/* Блок рейтинга */
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   margin-bottom: 10px;
+}
+
+.stars {
+  color: #e0e0e0; /* Серые пустые звезды */
+  font-size: 18px;
+}
+
+.stars .filled {
+  color: #f14635; /* Красные звезды (Kaspi Red) */
+}
+
+.reviews {
+  color: #999;
+  font-size: 12px;
+}
+
+/* Цена */
+.price {
+  font-size: 18px;
   font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+  display: block;
 }
 
-.share-btn {
-  background-color: #0089d0;
-  color: white;
+/* Кнопки Share */
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto; /* Прижимает кнопки к низу */
+}
+
+.btn-whatsapp, .btn-telegram {
+  flex: 1;
   border: none;
-  padding: 8px 20px;
-  border-radius: 8px;
+  padding: 8px 0;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
   cursor: pointer;
-  font-size: 14px;
-  width: 100%; /* Кнопка на всю ширину карточки */
 }
 
-.share-btn:hover {
-  background-color: #0077b5;
+.btn-whatsapp {
+  background-color: #25D366; /* Цвет WhatsApp */
 }
 
-/* АДАПТИВНОСТЬ (Бонус) */
-/* Если экран меньше 1000px, делаем 3 колонки, если телефон - 1 */
+.btn-telegram {
+  background-color: #0088cc; /* Цвет Telegram */
+}
+
+.btn-whatsapp:hover { background-color: #128c7e; }
+.btn-telegram:hover { background-color: #0077b5; }
+
+/* Адаптивность */
 @media (max-width: 1024px) {
-  .product-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .product-container { grid-template-columns: repeat(3, 1fr); }
 }
-
 @media (max-width: 768px) {
-  .product-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .product-container { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 480px) {
-  .product-container {
-    grid-template-columns: 1fr;
-  }
+  .product-container { grid-template-columns: 1fr; }
 }
