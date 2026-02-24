@@ -14,7 +14,7 @@ import { Product } from './products';
 })
 export class AppComponent {
   categories = CATEGORIES;
-  allProducts = PRODUCTS;
+  allProducts = [...PRODUCTS]; 
   
   selectedCategory: Category | null = null;
   filteredProducts: Product[] = [];
@@ -22,5 +22,10 @@ export class AppComponent {
   selectCategory(category: Category) {
     this.selectedCategory = category;
     this.filteredProducts = this.allProducts.filter(p => p.categoryId === category.id);
+  }
+  
+  onRemoveProduct(productId: number) {
+    this.allProducts = this.allProducts.filter(p => p.id !== productId);
+    this.filteredProducts = this.filteredProducts.filter(p => p.id !== productId);
   }
 }

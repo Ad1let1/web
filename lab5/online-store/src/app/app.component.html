@@ -16,7 +16,7 @@
 <main>
   @if (selectedCategory) {
     <h2 class="category-title">Категория: {{ selectedCategory.name }}</h2>
-    <app-product-list [products]="filteredProducts"></app-product-list>
+    <app-product-list [products]="filteredProducts" (remove)="onRemoveProduct($event)"></app-product-list>
   } @else {
     <h3 class="welcome-msg">
       👈 Выберите категорию товаров сверху, чтобы начать покупки
