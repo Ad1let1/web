@@ -1,0 +1,62 @@
+/* Шапка сайта: выстраиваем элементы в одну линию (flex) */
+.main-header {
+  display: flex;
+  align-items: center; /* Центрируем по вертикали */
+  justify-content: flex-start; /* Прижимаем всё к левому краю */
+  gap: 50px; /* Расстояние между логотипом и кнопками */
+  padding: 20px 40px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Логотип */
+.logo {
+  color: #f14635; /* Красный цвет Kaspi */
+  margin: 0;
+  font-size: 32px;
+}
+
+/* Блок с кнопками */
+.categories {
+  display: flex;
+  gap: 15px;
+}
+
+/* Кнопки категорий */
+.category-btn {
+  padding: 12px 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px; /* УВЕЛИЧЕННЫЙ ШРИФТ */
+  font-weight: 500;
+  background: white;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Активная (выбранная) кнопка */
+.category-btn.active {
+  background: #f14635;
+  color: white;
+  border-color: #f14635;
+}
+
+/* Заголовок выбранной категории */
+.category-title {
+  padding-left: 40px;
+  margin-top: 25px;
+  color: #333;
+}
+
+/* Сообщение, когда ничего не выбрано */
+.welcome-msg {
+  text-align: center;
+  margin-top: 60px;
+  color: #888;
+  font-weight: normal;
+}

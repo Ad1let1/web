@@ -1,0 +1,252 @@
+import { Category } from './category';
+import { Product } from './products';
+
+export const CATEGORIES: Category[] = [
+  { id: 1, name: 'Smartphones' },
+  { id: 2, name: 'Laptops' },
+  { id: 3, name: 'Headphones' },
+  { id: 4, name: 'Прочие' }
+];
+export const PRODUCTS: Product[] = [
+    {
+      id: 1,
+      categoryId: 1,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-medium',
+      name: 'iPhone 13 128GB',
+      description: 'Отличный смартфон от Apple с ярким экраном и мощным процессором.',
+      rating: 5,
+      link: 'https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/',
+      price: 298000,
+      reviews: 1205,
+      likes: 0
+    },
+    {
+      id: 2,
+      categoryId: 1,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p6a/p00/33081235.jpg?format=gallery-medium',
+      name: 'Xiaomi Redmi Note 13',
+      description: 'Бюджетный хит с хорошей камерой и емкой батареей.',
+      rating: 4.5,
+      link: 'https://kaspi.kz/shop/p/xiaomi-redmi-note-13-pro-5g-nfc-12-gb-512-gb-chernyi-116684101/?c=750000000',
+      price: 125000,
+      reviews: 850,
+      likes: 0
+    },
+    {
+      id: 3,
+      categoryId: 4,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hf6/h59/81433687392286.jpg?format=gallery-medium',
+      name: 'Пылесос Dyson Slim Fluffy серый, фиолетовый',
+      description: 'Пылосос, в комплекте с кейсом.',
+      rating: 4.9,
+      link: 'https://kaspi.kz/shop/p/dyson-slim-fluffy-seryi-fioletovyi-111044307/?c=750000000',
+      price: 320000,
+      reviews: 45,
+      likes: 0
+    },
+    {
+      id: 4,
+      categoryId: 4,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hf1/h03/84526695677982.jpg?format=gallery-medium',
+      name: 'Sony PlayStation 5 Slim',
+      description: 'Игровая консоль нового поколения с поддержкой 4K и HDR.',
+      rating: 5,
+      link: 'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/',
+      price: 245000,
+      reviews: 650,
+      likes: 0
+    },
+    {
+      id: 5,
+      categoryId: 3,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h79/hdf/87077988368414.png?format=gallery-medium',
+      name: 'Samsung Galaxy Buds2 Pro',
+      description: 'Беспроводные наушники с активным шумоподавлением и студийным звуком.',
+      rating: 4.7,
+      link: 'https://kaspi.kz/shop/p/naushniki-samsung-buds-3-seryi-123383427/?c=750000000',
+      price: 75000,
+      reviews: 230,
+      likes: 0
+    },
+    {
+      id: 6,
+      categoryId: 2,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hf4/h52/64509322919966.jpg?format=gallery-medium',
+      name: 'Apple MacBook Air 13 M2',
+      description: 'Сверхтонкий ноутбук с производительным чипом M2.',
+      rating: 4.8,
+      link: 'https://kaspi.kz/shop/p/apple-macbook-air-13-2022-13-6-8-gb-ssd-256-gb-macos-mlxw3-105933794/',
+      price: 520000,
+      reviews: 112,
+      likes: 0
+    },
+    {
+      id: 7,
+      categoryId: 4,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p55/p9b/5542335.png?format=gallery-medium',
+      name: 'Смарт-часы Apple Watch SE GPS Gen.2 2024 S/M 40 мм бежевый',
+      description: 'Компактная рожковая кофеварка для приготовления эспрессо и капучино.',
+      rating: 4.6,
+      link: 'https://kaspi.kz/shop/p/apple-watch-se-gps-gen-2-2024-s-m-40-mm-bezhevyi-129172890/?c=750000000',
+      price: 89000,
+      reviews: 94,
+      likes: 0
+    },
+    {
+      id: 8,
+      categoryId: 4,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/he7/hb1/86887758004254.jpg?format=gallery-medium',
+      name: 'Яндекс Станция Литл 2',
+      description: 'Умная колонка с голосовым помощником Алиса.',
+      rating: 4.9,
+      link: 'https://kaspi.kz/shop/p/jandeks-stantsija-lait-2-fioletovyi-122679962/?c=750000000',
+      price: 24990,
+      reviews: 1560,
+      likes: 0
+    },
+    {
+      id: 9,
+      categoryId: 1,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p24/p88/64170090.png?format=gallery-medium',
+      name: 'Смартфон Apple iPhone 17 Pro Max 256Gb оранжевый',
+      description: 'Apple iPhone 17 Pro Max 256Gb — это воплощение инноваций и стиля, предлагающее безупречную производительность и непревзойденные возможности для тех, кто всегда в движении.',
+      rating: 5,
+      link: 'https://kaspi.kz/shop/p/apple-iphone-17-pro-max-256gb-oranzhevyi-145468241/?c=750000000',
+      price: 895964,
+      reviews: 854,
+      likes: 0
+    },
+    {
+      id: 10,
+      categoryId: 1,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/pde/p5c/30501454.png?format=gallery-medium',
+      name: 'Смартфон Samsung Galaxy A56 5G 8 ГБ/128 ГБ серый',
+      description: 'Samsung Galaxy A56 5G — смартфон, который сочетает в себе высокую производительность, современные технологии и стильный дизайн.',
+      rating: 5,
+      link: 'https://kaspi.kz/shop/p/samsung-galaxy-a56-5g-8-gb-128-gb-seryi-136422081/?c=750000000',
+      price: 178980,
+      reviews: 715,
+      likes: 0
+    },
+    {
+      id: 11,
+      categoryId: 1,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hce/h64/64731086848030.jpg?format=gallery-medium',
+      name: 'Смартфон Samsung Galaxy Z Flip 3 New 8 ГБ/128 ГБ лавандовый',
+      description: 'Смартфон Samsung Galaxy Z Flip 3 New 8 ГБ/128 ГБ лавандовый',
+      rating: 4.9,
+      link: 'https://kaspi.kz/shop/p/samsung-galaxy-z-flip-3-new-8-gb-128-gb-lavandovyi-102826842/?c=750000000',
+      price: 530000,
+      reviews: 10,
+      likes: 0
+    },
+    {
+      id: 12,
+      categoryId: 2,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p24/pae/30100209.jpeg?format=gallery-medium',
+      name: 'Ноутбук Acer Aspire 3',
+      description: 'Ноутбук Acer Aspire 3 15.6" / 8 Гб / SSD 256 Гб / Win 11 Pro / A325-45 / ZN.N01SI.03K.',
+      rating: 2,
+      link: 'https://kaspi.kz/shop/p/acer-aspire-3-15-6-8-gb-ssd-256-gb-win-11-pro-a325-45-zn-n01si-03k--136300221/?c=750000000',
+      price: 161000,
+      reviews: 450,
+      likes: 0
+    },
+    {
+        id: 13,
+        categoryId: 2,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/h73/h87/63947822596126.jpg?format=gallery-medium',
+        name: 'Macbook Air 13',
+        description: 'Ноутбук Apple MacBook Air 13 2020 13.3" / 8 Гб / SSD 256 Гб / macOS / MGN63',
+        rating: 5,
+        link: 'https://kaspi.kz/shop/p/apple-macbook-air-13-2020-13-3-8-gb-ssd-256-gb-macos-mgn63-100797845/?c=750000000',
+        price: 397000,
+        reviews: 934,
+        likes: 0
+    },
+    {
+        id: 14,
+        categoryId: 2,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/pa9/p73/76900612.png?format=gallery-medium',
+        name: 'ASUS TUF Gaming',
+        description: 'Ноутбук ASUS ASUS TUF Gaming A16 16" / 16 Гб / SSD 512 Гб / Без ОС / FA607NUG-RL161',
+        rating: 5,
+        link: 'https://kaspi.kz/shop/p/asus-asus-tuf-gaming-a16-16-16-gb-ssd-512-gb-bez-os-fa607nug-rl161-149288699/?c=750000000',
+        price: 555990,
+        reviews: 40,
+        likes: 0
+    },
+    {
+        id: 15,
+        categoryId: 2,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/pfd/p49/48619238.jpg?format=gallery-medium',
+        name: 'Ноутбук Oyan Lite X14',
+        description: 'Ноутбук Oyan Lite X14 14.1" / 8 Гб / SSD 512 Гб / Win 11 Home / R1526',
+        rating: 4.3,
+        link: 'https://kaspi.kz/shop/p/oyan-lite-x14-14-1-8-gb-ssd-512-gb-win-11-home-r1526-115724796/?c=750000000',
+        price: 134500,
+        reviews: 366,
+        likes: 0
+    },
+    {
+        id: 16,
+        categoryId: 3,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/h44/h92/85730021769246.jpg?format=gallery-medium',
+        name: 'Наушники Air pro 2 белый',
+        description: '',
+        rating: 4.3,
+        link: 'https://kaspi.kz/shop/p/naushniki-air-pro-2-belyi-118366664/?c=750000000',
+        price: 2250,
+        reviews: 2000,
+        likes: 0
+    },
+    {
+        id: 17,
+        categoryId: 3,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/h34/ha2/63785534455838.jpg?format=gallery-medium',
+        name: 'Наушники Apple AirPods Pro белый',
+        description: 'AirPods Pro — уникальные наушники с технологией активного шумоподавления, которые непрерывно оптимизируют звучание с учётом формы вашего уха и положения вкладышей. Они отлично заглушают внешние шумы, поэтому вы можете полностью погрузиться в музыку.',
+        rating: 4.3,
+        link: 'https://kaspi.kz/shop/p/naushniki-apple-airpods-pro-belyi-4804718/?c=750000000',
+        price: 111508,
+        reviews: 3150,
+        likes: 0
+    },
+    {
+        id: 18,
+        categoryId: 3,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/p64/pde/11569142.jpg?format=gallery-medium',
+        name: 'Наушники Sony WH-1000XM4 черный',
+        description: 'Наушники WH-1000XM4 совмещают в себе нашу лучшую технологию шумоподавления, исключительное качество звука и целый ряд интеллектуальных функций.',
+        rating: 5,
+        link: 'https://kaspi.kz/shop/p/naushniki-sony-wh-1000xm4-chernyi-100471997/?c=750000000',
+        price: 489999,
+        reviews: 904,
+        likes: 1000000
+    },
+    {
+        id: 19,
+        categoryId: 3,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/h9c/h23/65099684020254.jpg?format=gallery-medium',
+        name: 'Наушники Sony WH-1000XM5 черный',
+        description: 'Наушники WH-1000XM5 совмещают в себе нашу лучшую технологию шумоподавления, исключительное качество звука и целый ряд интеллектуальных функций.',
+        rating: 5,
+        link: 'https://kaspi.kz/shop/p/naushniki-sony-wh-1000xm5-chernyi-105259822/?c=750000000',
+        price: 134999,
+        reviews: 357,
+        likes: 0
+    },
+    {
+        id: 20,
+        categoryId: 4,
+        image: 'https://resources.cdn-kaspi.kz/img/m/p/h3c/h41/70132423852062.jpg?format=gallery-medium',
+        name: 'Парогенератор Braun IS7282BL синий',
+        description: 'парогенератор Braun IS7282BL — идеальный помощник для быстрой и эффективной глажки. С мощностью 2700 Вт и максимальной подачей пара 180 г/мин он справится даже с самыми сложными складками на любых тканях.',
+        rating: 5,
+        link: 'https://kaspi.kz/shop/p/braun-is7282bl-sinii-109385061/?c=750000000',
+        price: 139990,
+        reviews: 3,
+        likes: 0
+    },
+
+]

@@ -1,0 +1,25 @@
+<header class="main-header">
+  <h1 class="logo">My Kaspi Store</h1>
+  
+  <nav class="categories">
+    @for (cat of categories; track cat.id) {
+      <button 
+        (click)="selectCategory(cat)"
+        [class.active]="selectedCategory?.id === cat.id"
+        class="category-btn"> 
+        {{ cat.name }}
+      </button>
+    }
+  </nav>
+</header>
+
+<main>
+  @if (selectedCategory) {
+    <h2 class="category-title">Категория: {{ selectedCategory.name }}</h2>
+    <app-product-list [products]="filteredProducts"></app-product-list>
+  } @else {
+    <h3 class="welcome-msg">
+      👈 Выберите категорию товаров сверху, чтобы начать покупки
+    </h3>
+  }
+</main>
