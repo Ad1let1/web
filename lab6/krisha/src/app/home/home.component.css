@@ -1,76 +1,44 @@
-.hero-card {
-  height: 75vh;
-  background-color: #161b22;
-  border-radius: 16px;
-  border: 1px solid #30363d;
+.hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-}
-
-/* Фоновая сетка для стиля */
-.grid-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: linear-gradient(#21262d 1px, transparent 1px), linear-gradient(90deg, #21262d 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.3;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
+  height: 70vh;
   text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 12px;
   padding: 40px;
 }
 
-.status-badge {
-  display: inline-block;
-  background-color: rgba(0, 242, 254, 0.1);
-  color: #00f2fe;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-family: 'Space Grotesk', sans-serif;
-  margin-bottom: 30px;
-}
-
 .hero-content h1 {
-  font-size: 64px;
-  line-height: 1.1;
-  color: #fff;
-  margin-bottom: 30px;
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 20px;
-  color: #8b949e;
-  max-width: 600px;
-  margin: 0 auto 50px auto;
-  line-height: 1.6;
-}
-
-.btn-neon {
-  display: inline-block;
-  background: transparent;
-  color: #00f2fe;
   font-size: 18px;
-  font-weight: 600;
-  font-family: 'Space Grotesk', sans-serif;
-  text-decoration: none;
-  padding: 18px 45px;
-  border: 2px solid #00f2fe;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  position: relative;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 1.5;
 }
 
-.btn-neon:hover {
-  background-color: #00f2fe;
-  color: #0d1117;
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.6); /* Неоновое свечение */
+.btn-primary {
+  display: inline-block;
+  background-color: #ffcc00; /* Желтый цвет Крыши */
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
 }

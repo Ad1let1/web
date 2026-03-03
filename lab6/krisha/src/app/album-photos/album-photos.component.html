@@ -1,27 +1,23 @@
 <div class="gallery-container">
-  <div class="gallery-header-section">
-    <button (click)="goBack()" class="btn-back-link">⬅ Back to Catalogue</button>
-    <div class="title-with-badge">
-      <h2>Gallery Explorer</h2>
-      <span class="id-badge-neon">Loaded from JSONPlaceholder API</span>
-    </div>
+  <div class="gallery-header">
+    <button (click)="goBack()" class="btn-back">⬅ Назад к объявлению</button>
+    <h2>Галерея объекта</h2>
   </div>
 
   @if (!loaded) {
-    <div class="loader">Fetching photos from server...</div>
+    <div class="loader">Загрузка фотографий...</div>
   } @else {
-    <div class="neon-photo-grid">
+    <div class="photo-grid">
       @for (photo of photos; track photo.id) {
-        <div class="neon-photo-card">
-          <div class="image-wrapper">
+        <div class="photo-card">
             <img 
-              [src]="photo.url" 
-              [alt]="photo.title" 
-              class="photo-img"
-              (error)="handleImageError($event)"
+            [src]="photo.url" 
+            [alt]="photo.title" 
+            class="photo-img"
+            (error)="handleImageError($event)"
             >
-            <div class="photo-overlay">Photo #{{ photo.id }}</div>
-          </div>
+          
+          <div class="photo-title">{{ photo.title }}</div>
         </div>
       }
     </div>

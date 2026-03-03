@@ -1,31 +1,31 @@
 <div class="detail-container">
   @if (!loaded) {
-    <div class="loader">Loading object data...</div>
+    <div class="loader">Скачиваем данные об объекте...</div>
   } @else {
-    <div class="dark-detail-card">
+    <div class="detail-card">
       <div class="card-header">
-        <span class="badge-accent">Object ID: {{ album.id }}</span>
-        <h2>Listing Manager</h2>
+        <h2>Управление объявлением #{{ album.id }}</h2>
       </div>
 
       <div class="card-body">
         <div class="form-group">
-          <label>Listing Title</label>
-          <p class="helper-text">This title is loaded from JSONPlaceholder. It cannot be permanently changed.</p>
-          <input type="text" [value]="album.title" #newTitle class="dark-input">
+          <label>Заголовок объявления (можно менять):</label>
+          <input type="text" [value]="album.title" #newTitle class="title-input">
         </div>
 
-        <div class="actions">
-          <button (click)="saveTitle(newTitle.value)" class="btn-save">Save Title</button>
+        <div class="action-buttons">
+          <button (click)="saveTitle(newTitle.value)" class="btn-save">
+            💾 Сохранить изменения
+          </button>
           
-          <a [routerLink]="['/albums', album.id, 'photos']" class="btn-photos-neon">
-            📷 View Photo Gallery
+          <a [routerLink]="['/albums', album.id, 'photos']" class="btn-photos">
+            📷 Смотреть фото квартиры
           </a>
         </div>
       </div>
 
       <div class="card-footer">
-        <button (click)="goBack()" class="btn-back">⬅ Back to Catalogue</button>
+        <button (click)="goBack()" class="btn-back">⬅ Вернуться к списку</button>
       </div>
     </div>
   }
