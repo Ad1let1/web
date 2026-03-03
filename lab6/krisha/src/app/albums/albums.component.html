@@ -1,0 +1,32 @@
+<div class="page-title-section">
+  <h2> Catalogue</h2>
+  <p>Listing database powered by <span class="placeholder-api">JSONPlaceholder</span></p>
+</div>
+
+@if (!loaded) {
+  <div class="loader-container">
+    <div class="spinner"></div>
+    <p>Fetching objects from server...</p>
+  </div>
+} @else {
+  <div class="dark-grid">
+    @for (album of albums; track album.id) {
+      <div class="dark-card">
+        
+        <div class="card-image-placeholder">
+          <div class="house-icon">🏠</div>
+          <div class="neon-id">Object #{{ album.id }}</div>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">{{ album.title }}</h3>
+          
+          <div class="card-footer">
+            <a [routerLink]="['/albums', album.id]" class="btn-card-primary">Details</a>
+            <button (click)="deleteAlbum(album.id)" class="btn-card-danger">Archive</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+}

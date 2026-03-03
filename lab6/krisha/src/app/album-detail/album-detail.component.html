@@ -1,0 +1,32 @@
+<div class="detail-container">
+  @if (!loaded) {
+    <div class="loader">Loading object data...</div>
+  } @else {
+    <div class="dark-detail-card">
+      <div class="card-header">
+        <span class="badge-accent">Object ID: {{ album.id }}</span>
+        <h2>Listing Manager</h2>
+      </div>
+
+      <div class="card-body">
+        <div class="form-group">
+          <label>Listing Title</label>
+          <p class="helper-text">This title is loaded from JSONPlaceholder. It cannot be permanently changed.</p>
+          <input type="text" [value]="album.title" #newTitle class="dark-input">
+        </div>
+
+        <div class="actions">
+          <button (click)="saveTitle(newTitle.value)" class="btn-save">Save Title</button>
+          
+          <a [routerLink]="['/albums', album.id, 'photos']" class="btn-photos-neon">
+            📷 View Photo Gallery
+          </a>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button (click)="goBack()" class="btn-back">⬅ Back to Catalogue</button>
+      </div>
+    </div>
+  }
+</div>

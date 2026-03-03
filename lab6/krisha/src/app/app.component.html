@@ -1,0 +1,19 @@
+<header class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <a routerLink="/home"><span class="accent-dot">/</span>adilet.estates</a>
+    </div>
+    
+    <nav class="nav-links">
+      <a routerLink="/home" routerLinkActive="active">Главная</a>
+      <a routerLink="/albums" routerLinkActive="active">Каталог</a>
+      <a routerLink="/about" routerLinkActive="active">Обо мне</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
