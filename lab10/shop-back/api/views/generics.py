@@ -4,7 +4,6 @@ from rest_framework.response import Response
 from api.models import Product, Category
 from api.serializers import ProductSerializer, CategorySerializer
 
-# --- PRODUCT ENDPOINTS ---
 class ProductListAPIView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -14,7 +13,6 @@ class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProductSerializer
     lookup_url_kwarg = 'product_id'
 
-# --- CATEGORY ENDPOINTS ---
 class CategoryListAPIView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -22,9 +20,8 @@ class CategoryListAPIView(generics.ListCreateAPIView):
 class CategoryDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    lookup_url_kwarg = 'category_id' # Связываем id категории из URL
+    lookup_url_kwarg = 'category_id'
 
-# Custom APIView для получения продуктов по категории
 class CategoryProductsAPIView(APIView):
     def get(self, request, category_id):
         products = Product.objects.filter(category_id=category_id)
